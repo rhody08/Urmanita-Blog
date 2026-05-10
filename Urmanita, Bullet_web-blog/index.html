@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Educational Tour Blog">
+
+  <title>Educational Tour 2026</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+  <style>
+
+    *{
+      scroll-behavior: smooth;
+    }
+
+    body{
+      font-family: 'Poppins', sans-serif;
+      background: #f5f1ea;
+      color: #1f2937;
+      overflow-x: hidden;
+    }
+
+    .paper{
+      background: #fffdf9;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .magazine-card{
+      transition: 0.4s ease;
+    }
+
+    .magazine-card:hover{
+      transform: translateY(-10px) rotate(-1deg);
+    }
+
+    .grid-magazine{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(380px,1fr));
+      gap: 40px;
+    }
+
+    .number-stamp{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 70px;
+      height: 70px;
+      border-radius: 999px;
+      background: #111827;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 800;
+      border: 5px solid #fff;
+      z-index: 20;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .hero-grid{
+      background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+      background-size: 60px 60px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-[#f5f1ea]/90 backdrop-blur-lg border-b border-black/5">
+
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+      <h1 class="text-3xl font-black tracking-tight">
+        EDUC<span class="text-orange-500">TOUR</span>
+      </h1>
+
+      <div class="hidden md:flex gap-10 font-medium">
+
+        <a href="#aboutme" class="hover:text-orange-500 transition">
+          About Me
+        </a>
+
+        <a href="#tour" class="hover:text-orange-500 transition">
+          Tour
+        </a>
+
+        <a href="#journal" class="hover:text-orange-500 transition">
+          Journal
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen bg-[#111827] overflow-hidden hero-grid flex items-center">
+
+    <!-- Background Glow -->
+    <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-orange-500/20 blur-[120px] rounded-full"></div>
+
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-yellow-400/10 blur-[140px] rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+        <!-- LEFT -->
+        <div>
+
+          <div class="inline-flex items-center gap-3 bg-white/10 border border-white/10 px-5 py-2 rounded-full mb-8 backdrop-blur-lg">
+
+            <span class="w-3 h-3 rounded-full bg-orange-400 animate-pulse"></span>
+
+            <p class="uppercase tracking-[4px] text-sm text-orange-300 font-semibold">
+              April 2026 • Philippines
+            </p>
+
+          </div>
+
+          <h1 class="text-6xl md:text-8xl font-black text-white leading-none mb-8">
+
+            Educational
+            <br>
+
+            <span class="text-orange-400">
+              Tour
+            </span>
+
+            Journal
+
+          </h1>
+
+          <p class="text-gray-300 text-xl leading-relaxed max-w-2xl mb-10">
+
+            A visual story of our unforgettable
+            7-day journey through Manila,
+            Tagaytay, and Baguio City.
+
+          </p>
+
+          <div class="flex flex-wrap gap-5">
+
+            <a href="#journal"
+               class="bg-orange-500 hover:bg-orange-600 transition text-white px-8 py-4 rounded-full font-semibold">
+
+              Explore Journey
+
+            </a>
+
+            <a href="#aboutme"
+               class="border border-white/20 hover:bg-white/10 transition text-white px-8 py-4 rounded-full">
+
+              About Me
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="relative">
+
+          <!-- Main Photo -->
+          <div class="bg-white p-4 rotate-[-5deg] shadow-2xl">
+
+            <img
+              src="./pictures/9cdce4b4-b8e0-4f4b-a0f3-30cc89c11b7b.jpg"
+              class="w-full h-[520px] object-cover"
+              alt=""
+            >
+
+          </div>
+
+          <!-- Floating Photo -->
+          <div class="absolute -bottom-10 -left-10 bg-white p-3 rotate-[8deg] shadow-2xl w-64">
+
+            <img
+                            src="./pictures/3ade0171-bebd-40ce-86d8-de8380f3223b.jpg"
+
+              class="w-full h-48 object-cover"
+              alt=""
+            >
+
+            <p class="text-center font-bold mt-3">
+              Manila Adventure
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="aboutme" class="py-28">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div class="relative">
+
+          <div class="absolute -bottom-6 -left-6 w-full h-full border-[12px] border-orange-400"></div>
+
+          <img
+            src="./pictures/bf00ae91-2332-479f-9965-9a0e597be6d3.jpg"
+            alt="Bullet"
+            class="relative z-10 w-full h-full object-cover"
+          >
+
+        </div>
+
+        <div>
+
+          <p class="uppercase tracking-[6px] text-orange-500 mb-4 font-semibold">
+            Student Feature
+          </p>
+
+          <h2 class="text-6xl font-black leading-tight mb-8">
+            Ian Bullet John Q. Urmanita
+          </h2>
+
+          <p class="text-lg leading-relaxed text-gray-700">
+            BS Information Technology student at Western Mindanao State University.
+            Passionate about technology, innovation,
+            and educational experiences that inspire growth,
+            learning, and exploration.
+          </p>
+
+          <p class="text-lg leading-relaxed text-gray-700 mt-6">
+            This tour provided valuable opportunities to visit
+            industries, government agencies,
+            tourist attractions, and technology companies
+            across the Philippines.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mt-10">
+
+            <div class="bg-black text-white px-6 py-4">
+
+              <span class="text-sm uppercase text-orange-300">
+                Program
+              </span>
+
+              <h4 class="font-bold text-lg">
+                BS Information Technology
+              </h4>
+
+            </div>
+
+            <div class="bg-orange-500 text-white px-6 py-4">
+
+              <span class="text-sm uppercase">
+                University
+              </span>
+
+              <h4 class="font-bold text-lg">
+                WMSU
+              </h4>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TOUR -->
+  <section id="tour" class="py-28 bg-black text-white">
+
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <p class="uppercase tracking-[6px] text-orange-400 mb-5">
+        Tour Overview
+      </p>
+
+      <h2 class="text-6xl font-black mb-10">
+        A Journey of Discovery
+      </h2>
+
+      <p class="text-lg leading-relaxed text-gray-300">
+        This educational tour documented our unforgettable
+        7-day experience traveling from Zamboanga City
+        to Manila, Tagaytay, and Baguio.
+        We explored famous tourist attractions,
+        animation studios, BPO companies,
+        and government agencies while gaining
+        valuable knowledge and memorable experiences.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- JOURNAL -->
+  <section id="journal" class="py-28">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-20">
+
+        <p class="uppercase tracking-[6px] text-orange-500 mb-4 font-semibold">
+          Tour Entries
+        </p>
+
+        <h2 class="text-6xl font-black">
+          Daily Journal
+        </h2>
+
+      </div>
+
+      <div id="journal-grid" class="grid-magazine">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white py-12 text-center">
+
+    <h3 class="text-2xl font-black">
+                  Ian Bullet John Q. Urmanita
+
+    </h3>
+
+    <p class="text-gray-400 mt-2">
+      BS Information Technology • April 2026
+    </p>
+
+  </footer>
+
+  <script>
+
+    const days = [
+
+      {
+        day: 1,
+        title: "Arrival & Cultural Landmarks",
+        location: "Zamboanga → Manila",
+        images: [
+          "./pictures/2bfa5378-ccb3-404b-8545-e6b066993b74.jpg",
+          "./pictures/4a4f3f77-590a-4646-9102-77d47ffde3cc.jpg",
+        ],
+        stops: [
+          "Luneta Park",
+          "Intramuros",
+          "Manila Cathedral",
+          "SM Mall of Asia"
+        ]
+      },
+
+      {
+        day: 2,
+        title: "Robotics & BPO Industry",
+        location: "Manila",
+        images: [
+          "./pictures/520c7b31-20ae-40b5-b8a4-58a26d98d49e.jpg",
+          "./pictures/285766a4-961d-45ff-ab2b-94bf787b50dd.jpg",
+        ],
+        stops: [
+          "HYTEC Power Inc.",
+          "Opentext"
+        ]
+      },
+
+      {
+        day: 3,
+        title: "Animation & Outsourcing",
+        location: "Manila",
+        images: [
+          "./pictures/7ac86649-893a-4fd2-b254-85ab68ed5694.jpg",
+          "./pictures/4b2ba23d-7e21-40af-8fe9-935b7129f6e2.jpg",
+        ],
+        stops: [
+          "TOP PEG Animation Studio",
+          "Teleperformance"
+        ]
+      },
+
+      {
+        day: 4,
+        title: "Government Tech & Career Skills",
+        location: "Manila",
+        images: [
+          "./pictures/1ddd4b50-74b7-4592-a58b-4f048822e2b1.jpg",
+          "./pictures/87e7bb21-0aca-476a-8103-3b7b29584e40.jpg",
+        ],
+        stops: [
+          "MMDA",
+          "Microsourcing"
+        ]
+      },
+
+      {
+        day: 5,
+        title: "Scenic Heights of Tagaytay",
+        location: "Tagaytay",
+        images: [
+          "./pictures/1666396a-dd57-4898-b4c6-77791472802c.jpg",
+          "./pictures/b1ae2d06ad8044d5a7dd773a81cd12dd.jpg",
+        ],
+        stops: [
+          "People’s Park in the Sky",
+          "Sky Ranch Tagaytay"
+        ]
+      },
+
+      {
+        day: 6,
+        title: "The Summer Capital",
+        location: "Baguio City",
+        images: [
+          "./pictures/fa4a43d1-26fa-410e-9687-f7e72e86bdda.jpg",
+          "./pictures/9306923b-af2e-4660-b51f-011820f2312c.jpg",
+        ],
+        stops: [
+          "Strawberry Farm",
+          "Bell Church",
+          "PMA",
+          "Mine’s View Park",
+          "The Mansion",
+          "Burnham Park"
+        ]
+      },
+
+      {
+        day: 7,
+        title: "Last Morning in Baguio",
+        location: "Baguio → Quezon City",
+        images: [
+          "./pictures/image .jpg",
+          "./pictures/images.jpg",
+        ],
+        stops: [
+          "SM Baguio",
+          "Travel Back to Quezon City"
+        ]
+      }
+
+    ];
+
+    function renderJournal(){
+
+      const container = document.getElementById('journal-grid');
+
+      days.forEach((d,index)=>{
+
+        const card = document.createElement('div');
+
+        card.className =
+        'magazine-card paper relative overflow-hidden';
+
+        card.innerHTML = `
+
+          <!-- DAY STAMP -->
+          <div class="number-stamp">
+            ${d.day}
+          </div>
+
+          <!-- IMAGE GRID -->
+          <div class="grid grid-cols-2 gap-2 p-2 bg-black">
+
+            <img
+              src="${d.images[0]}"
+              class="w-full h-72 object-cover"
+            >
+
+            <img
+              src="${d.images[1] ? d.images[1] : d.images[0]}"
+              class="w-full h-72 object-cover"
+            >
+
+          </div>
+
+          <!-- CONTENT -->
+          <div class="p-8">
+
+            <p class="uppercase tracking-[4px] text-orange-500 text-sm font-semibold mb-3">
+              ${d.location}
+            </p>
+
+            <h3 class="text-4xl font-black mb-6 leading-tight">
+              ${d.title}
+            </h3>
+
+            <div class="space-y-4">
+
+              ${d.stops.map(stop => `
+
+                <div class="flex gap-4 items-start">
+
+                  <div class="
+                    min-w-[42px] h-[42px]
+                    bg-orange-500 text-white
+                    flex items-center justify-center
+                  ">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                  </div>
+
+                  <p class="text-gray-700 pt-2 text-lg">
+                    ${stop}
+                  </p>
+
+                </div>
+
+              `).join('')}
+
+            </div>
+
+          </div>
+
+        `;
+
+        container.appendChild(card);
+
+      });
+
+    }
+
+    window.onload = () => {
+      renderJournal();
+    }
+
+  </script>
+
+</body>
+</html>
