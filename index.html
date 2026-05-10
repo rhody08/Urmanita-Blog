@@ -363,6 +363,7 @@
         day: 1,
         title: "Arrival & Cultural Landmarks",
         location: "Zamboanga → Manila",
+        story: "Our journey began with excitement as we departed from Zamboanga City. Upon arriving in Manila, we immediately immersed ourselves in the rich history and culture of the city. Walking through the historic streets of Intramuros felt like stepping back in time, and the magnificence of Manila Cathedral took our breath away.",
         images: [
           "./pictures/2bfa5378-ccb3-404b-8545-e6b066993b74.jpg",
           "./pictures/4a4f3f77-590a-4646-9102-77d47ffde3cc.jpg",
@@ -379,6 +380,7 @@
         day: 2,
         title: "Robotics & BPO Industry",
         location: "Manila",
+        story: "Today opened our eyes to the cutting-edge technology shaping the future. At HYTEC Power Inc., we witnessed incredible robotics innovations that are revolutionizing industries. Then at Opentext, we learned how Filipino talent is driving global business solutions, showcasing the excellence of our BPO sector.",
         images: [
           "./pictures/520c7b31-20ae-40b5-b8a4-58a26d98d49e.jpg",
           "./pictures/285766a4-961d-45ff-ab2b-94bf787b50dd.jpg",
@@ -393,6 +395,7 @@
         day: 3,
         title: "Animation & Outsourcing",
         location: "Manila",
+        story: "Creativity came alive as we explored the world of animation at TOP PEG Animation Studio. Seeing talented artists bring characters and stories to life was truly inspiring. Following that, Teleperformance showed us how exceptional customer service and outsourcing solutions connect the Philippines to the global market.",
         images: [
           "./pictures/7ac86649-893a-4fd2-b254-85ab68ed5694.jpg",
           "./pictures/4b2ba23d-7e21-40af-8fe9-935b7129f6e2.jpg",
@@ -407,6 +410,7 @@
         day: 4,
         title: "Government Tech & Career Skills",
         location: "Manila",
+        story: "We had the privilege of visiting MMDA, experiencing firsthand how technology manages one of Asia's busiest cities. The visit to Microsourcing emphasized the importance of developing specialized skills in the tech industry. These encounters reinforced our commitment to building careers that make a meaningful impact on society.",
         images: [
           "./pictures/1ddd4b50-74b7-4592-a58b-4f048822e2b1.jpg",
           "./pictures/87e7bb21-0aca-476a-8103-3b7b29584e40.jpg",
@@ -420,8 +424,7 @@
       {
         day: 5,
         title: "Scenic Heights of Tagaytay",
-        location: "Tagaytay",
-        images: [
+        location: "Tagaytay",        story: "Traveling to Tagaytay felt like ascending to a world of natural beauty and tranquility. The breathtaking views from People's Park in the Sky overlooking Taal Volcano were unforgettable. At Sky Ranch, we experienced thrilling adventures among the clouds, creating memories that will last a lifetime and reminding us of nature's incredible splendor.",        images: [
           "./pictures/1666396a-dd57-4898-b4c6-77791472802c.jpg",
           "./pictures/b1ae2d06ad8044d5a7dd773a81cd12dd.jpg",
         ],
@@ -434,8 +437,7 @@
       {
         day: 6,
         title: "The Summer Capital",
-        location: "Baguio City",
-        images: [
+        location: "Baguio City",        story: "Baguio City welcomed us with cool mountain air and unforgettable experiences. From picking fresh strawberries at the farm to attending service at the iconic Bell Church, every moment felt special. The panoramic views from Mine's View Park and the historical significance of PMA and The Mansion enriched our understanding of this remarkable city. Burnham Park's serene beauty was the perfect place to reflect on our journey.",        images: [
           "./pictures/fa4a43d1-26fa-410e-9687-f7e72e86bdda.jpg",
           "./pictures/9306923b-af2e-4660-b51f-011820f2312c.jpg",
         ],
@@ -453,6 +455,7 @@
         day: 7,
         title: "Last Morning in Baguio",
         location: "Baguio → Quezon City",
+        story: "As our week-long adventure came to an end, we took one last morning to enjoy Baguio's charm at SM Baguio. Reflecting on everything we'd learned—from robotics and animation to government tech and natural beauty—we felt grateful for this incredible educational journey. The drive back to Quezon City marked the end of an unforgettable chapter, but the memories and lessons would stay with us forever.",
         images: [
           "./pictures/image .jpg",
           "./pictures/images.jpg",
@@ -509,6 +512,10 @@
               ${d.title}
             </h3>
 
+            <p class="text-gray-700 text-base leading-relaxed mb-6">
+              ${d.story}
+            </p>
+
             <div class="space-y-4">
 
               ${d.stops.map(stop => `
@@ -525,7 +532,7 @@
 
                   </div>
 
-                  <p class="text-gray-700 pt-2 text-lg">
+                  <p class="text-gray-700 pt-2 text-base">
                     ${stop}
                   </p>
 
